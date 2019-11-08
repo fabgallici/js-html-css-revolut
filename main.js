@@ -29,6 +29,9 @@ $(document).ready(function () {
 
     if ($(this).find('.dropdown-content').hasClass('menu-show')) { //base funz
       $(this).find('.dropdown-content').removeClass('menu-show');
+    } else if ($('.dropdown-content').hasClass('menu-show')) {
+      $('.dropdown-content').removeClass('menu-show');
+      $(this).find('.dropdown-content').toggleClass('menu-show');
     } else {
       $(this).find('.dropdown-content').addClass('menu-show');
     }
