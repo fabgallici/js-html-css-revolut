@@ -31,7 +31,7 @@ $(document).ready(function () {
       $(this).find('.dropdown-content').removeClass('menu-show');
     } else if ($('.dropdown-content').hasClass('menu-show')) {
       $('.dropdown-content').removeClass('menu-show');
-      $(this).find('.dropdown-content').toggleClass('menu-show');
+      $(this).find('.dropdown-content').addClass('menu-show'); // funz anche con toggle
     } else {
       $(this).find('.dropdown-content').addClass('menu-show');
     }
