@@ -12,7 +12,7 @@
 <body>
   
   <div class="page-wrapper">
-      <header>
+   <header>
     <div class="header-left">
       <ul>
         <li><a href="#"><img src="assets/img/rev_logo.jpg" alt=""></a></li>
@@ -24,14 +24,23 @@
       <nav>
         <ul>
           <li><a href="#">Pricing</a></li>
-          <li><a href="#">Accounts</a></li>
+          <li class="dropdown">
+            <a href="#">Accounts</a>
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="">Standard</a></li>
+                <li><a href="">Premium</a></li>
+                <li><a href="">Metal</a></li>
+              </ul>
+            </div>
+          </li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Company</a></li>
           <li><a href="#">Help</a></li>
           <li><a href="#">EN <i class="fas fa-chevron-down"></i></a></li>
         </ul>
         <div>
-          <a href="#">Get the App</a>
+          <a class="app-btn" href="#">Get the App</a>
         </div>
       </nav>
     </div>
