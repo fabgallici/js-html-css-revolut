@@ -18,9 +18,17 @@ $(document).ready(function () {
     // $('.dropdown-content').hasClass('menu-show').removeClass('menu-show');
 
 
-    if ($('.dropdown-content').hasClass('menu-show')) {
-      console.log('class removed');
-      $('.dropdown-content').removeClass('menu-show');
+
+    // if ($('.dropdown-content').hasClass('menu-show')) {
+    //   console.log('class removed');
+    //   $('.dropdown-content').removeClass('menu-show');
+    //   $(this).find('.dropdown-content').toggleClass('menu-show');
+    // } else {
+    //   $(this).find('.dropdown-content').addClass('menu-show'); //add
+    // }
+
+    if ($(this).find('.dropdown-content').hasClass('menu-show')) { //base funz
+      $(this).find('.dropdown-content').removeClass('menu-show');
     } else {
       $(this).find('.dropdown-content').addClass('menu-show');
     }
