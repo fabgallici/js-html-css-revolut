@@ -14,7 +14,20 @@ $(document).ready(function () {
 
     // $(".dropdown-content").toggle();
     // $('.dropdown .dropdown-content').toggleClass('menu-show');
-    $(this).find('.dropdown-content').toggleClass('menu-show');
+
+    // $('.dropdown-content').hasClass('menu-show').removeClass('menu-show');
+
+
+    if ($('.dropdown-content').hasClass('menu-show')) {
+      console.log('class removed');
+      $('.dropdown-content').removeClass('menu-show');
+    } else {
+      $(this).find('.dropdown-content').addClass('menu-show');
+    }
+
+
+    // $(this).find('.dropdown-content').toggleClass('menu-show');
+    
   });
 
 });
