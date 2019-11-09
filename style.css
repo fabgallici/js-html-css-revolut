@@ -28,6 +28,7 @@ header {
   border-bottom: 1px solid #efefef;
   font-size: 18px;
 }
+/*-------- HEADER LEFT -----------*/
 .header-left ul,
 .header-right nav,
 .header-right nav ul {
@@ -42,6 +43,9 @@ header {
 .header-left > ul li {
   margin-right: 20px;
 }
+
+/*-------- HEADER RIGHT -----------*/
+.header-left .left-link a,
 .header-right a {
   color: rgb(139, 149, 158);
   transition: color 0.2s;
@@ -80,13 +84,30 @@ header {
 .hamburger {
   display: none;
 }
-
+/* ------ Hamburger Menu ----- */
+.hamburger-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    min-width: 100vw;
+    min-height: 100vh;
+    background: #fff;
+}
 @media screen and (max-width: 1080px) {
   .hamburger {
     display: block;
   }
 
+  .header-left .left-link,
   .header-right > nav {
     display: none;
+  }
+
+  .hamburger-menu.active {
+      display: block;
   }
 }

@@ -21,6 +21,15 @@ $(document).ready(function () {
     
   });
 
+  // Hamburger Menu Open
+  $('.hamburger').click(function() {
+    $('.hamburger-menu').addClass('active');
+  })
+  $('.hamburger-menu .close').click(function () {
+    $('.hamburger-menu').removeClass('active');
+  })
+  // Hamburger Menu Close
+
 });
 
     // var clickedMenu = $(this).find('dropdown-menu');
