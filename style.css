@@ -27,6 +27,8 @@ li {
 }
 .app-btn[href] {
  color: #fff;
+ font-weight: bold;
+ font-size: 16px;
  transition: all 0.2s ease;
 }
 .app-btn[href]:hover {
@@ -35,7 +37,6 @@ li {
 }
 /* ---- MAIN PAGE ----- */
 .page-wrapper {
-  /* width: 80%; */
   max-width: 1300px;
   padding-left: 4%;
   padding-right: 4%;
@@ -110,10 +111,17 @@ header {
   margin-left: 15px;
 }
 /* ------ Hamburger Menu ----- */
-.hamburger,
-.hamburger-dropdown-menu {
+/* .hamburger-dropdown-menu, */
+.hamburger {
   display: none;
 }
+.hamburger-dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+  height: 0;
+}
+
 .hamburger-menu {
     position: absolute;
     top: 0;
@@ -164,8 +172,14 @@ header {
     display: none;
   }
 
-  .hamburger-dropdown-menu.active,
+  /* .hamburger-dropdown-menu.active, */
   .hamburger-menu.active {
       display: block;
+  }
+
+  .hamburger-dropdown-menu.active {
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
   }
 }
