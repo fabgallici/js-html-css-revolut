@@ -30,7 +30,14 @@ $(document).ready(function () {
     $('.hamburger-menu').removeClass('active');
   })
   
-
+  //Hamburger Dropdown Menu
+  $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  $hambDropClose.click(function() {
+    $currentHambDrop = $(this).parent('.hamburger-dropdown');
+    $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
+    // $(this).parent('.hamburger-dropdown .hamburger-dropdown-menu').toggleClass('active');
+    console.log('click');
+  })
 });
 
     // var clickedMenu = $(this).find('dropdown-menu');

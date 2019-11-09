@@ -88,10 +88,11 @@ header {
 .is-active {
   display: block;
 }
-.hamburger {
+/* ------ Hamburger Menu ----- */
+.hamburger,
+.hamburger-dropdown-menu {
   display: none;
 }
-/* ------ Hamburger Menu ----- */
 .hamburger-menu {
     position: absolute;
     top: 0;
@@ -113,7 +114,6 @@ header {
   border-bottom: 1px solid #efefef;
 }
 
-
 /*--------- Media Query -----------*/
 @media screen and (max-width: 1080px) {
   .hamburger {
@@ -125,6 +125,7 @@ header {
     display: none;
   }
 
+  .hamburger-dropdown-menu.active,
   .hamburger-menu.active {
       display: block;
   }
