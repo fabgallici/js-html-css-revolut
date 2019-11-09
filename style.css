@@ -44,7 +44,7 @@ header {
 .dropdown {
   position: relative;
 }
-.dropdown-content {
+.dropdown-menu {
   position: absolute;
   top: 30px;
   left: -10px;
@@ -53,11 +53,11 @@ header {
   /* right: 0px; */
   box-shadow: 0 0 10px grey;
 }
-.dropdown-content ul {
+.dropdown-menu ul {
   display: flex;
   flex-direction: column;
 }
-.dropdown-content ul li {
+.dropdown-menu ul li {
   margin-left: 0;
   padding: 10px;
 }
