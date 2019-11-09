@@ -35,7 +35,6 @@ $(document).ready(function () {
   $hambDropClose.click(function() {
     $currentHambDrop = $(this).parent('.hamburger-dropdown');
     $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
-    // $(this).parent('.hamburger-dropdown .hamburger-dropdown-menu').toggleClass('active');
     console.log('click');
   })
 });

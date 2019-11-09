@@ -15,6 +15,9 @@ li {
   display: flex;
   flex-direction: column;
 }
+.txt-right {
+  text-align: right;
+}
 /* ---- MAIN PAGE ----- */
 .page-wrapper {
   /* width: 80%; */
@@ -57,6 +60,7 @@ header {
   color: rgb(139, 149, 158);
   transition: color 0.2s;
 }
+.hamburger-menu a:hover,
 .header-right a:hover {
   color: #191C1F;
 }
@@ -107,11 +111,23 @@ header {
 }
 .hamburger-menu li {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px 10px;
+  
 }
 .hamburger-menu .business {
   border-bottom: 1px solid #efefef;
+}
+.fl-bas-50 {
+  flex-basis: 50%;
+}
+
+.hamburger-dropdown ul {
+  padding-top: 15px;
+}
+.hamburger-dropdown li {
+  padding: 12px 0;
 }
 
 /*--------- Media Query -----------*/
