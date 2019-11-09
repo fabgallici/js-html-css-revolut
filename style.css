@@ -108,6 +108,7 @@ header {
     min-width: 100vw;
     min-height: 100vh;
     background: #fff;
+    /* overflow-x: auto; */
 }
 .hamburger-menu li {
   display: flex;
@@ -129,7 +130,9 @@ header {
 .hamburger-dropdown li {
   padding: 12px 0;
 }
-
+.hamburger-dropdown-menu {
+  
+}
 /*--------- Media Query -----------*/
 @media screen and (max-width: 1080px) {
   .hamburger {

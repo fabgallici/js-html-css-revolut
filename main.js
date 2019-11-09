@@ -31,11 +31,15 @@ $(document).ready(function () {
   })
   
   //Hamburger Dropdown Menu
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function() {
+  //   $currentHambDrop = $(this).parent('.hamburger-dropdown');
+  //   $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
+  // });
+  //Hamburger Dropdown Menu Alt version meno specifica
   $hambDropClose = $('.hamburger-dropdown .dropdown-close');
   $hambDropClose.click(function() {
-    $currentHambDrop = $(this).parent('.hamburger-dropdown');
-    $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
-    console.log('click');
+    $(this).next().toggleClass('active');
   })
 });
 
