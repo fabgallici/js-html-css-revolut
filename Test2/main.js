@@ -5,6 +5,16 @@ Cerco poi di gestire il fatto che possa essere aperto 1 solo dropdown alla volta
 
 $(document).ready(function () {
   
+  //Close dropdown menu on click outside
+  const $menu = $('.dropdown');
+
+  $(document).mouseup(e => {
+    if (!$menu.is(e.target) // if the target of the click isn't the container...
+      && $menu.has(e.target).length === 0) // ... nor a descendant of the container
+    {
+      $menu.removeClass('is-active');
+    }
+  });
 
 
   //Navbar dropdown menu
@@ -20,23 +30,6 @@ $(document).ready(function () {
     }
 
   });
-
-
-  //Navbar dropdown menu
-  // $('.dropdown').click(function() {
-
-  //   var $clickedDropdown = $(this).find('.dropdown-menu');
-
-  //   if ($clickedDropdown.hasClass('is-active')) { //base funz
-  //     $clickedDropdown.removeClass('is-active');
-  //   } else if ($('.dropdown-menu').hasClass('is-active')) {
-  //     $('.dropdown-menu').removeClass('is-active');
-  //     $clickedDropdown.addClass('is-active'); // funz anche con toggle
-  //   } else {
-  //     $clickedDropdown.addClass('is-active');
-  //   }
-    
-  // });
 
   // Hamburger Menu Open
   $('.hamburger').click(function() {
