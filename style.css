@@ -149,8 +149,9 @@ header {
 .hamburger-dropdown li {
   padding: 12px 0;
 }
-.hamburger-dropdown-menu {
-  
+.hamburger-menu .app-btn-cont {
+  margin-top: 30px;
+  text-align: center;
 }
 /*--------- Media Query -----------*/
 @media screen and (max-width: 1080px) {
