@@ -33,6 +33,9 @@ header {
 .header-right nav ul {
   display: flex;
 }
+.header-left ul {
+  align-items: center;
+}
 .header-right li {
   margin-left: 20px;
 }
@@ -73,4 +76,17 @@ header {
 
 .is-active {
   display: block;
+}
+.hamburger {
+  display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .hamburger {
+    display: block;
+  }
+
+  .header-right > nav {
+    display: none;
+  }
 }

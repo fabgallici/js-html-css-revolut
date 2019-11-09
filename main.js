@@ -7,6 +7,22 @@ $(document).ready(function () {
   
 
   $('.dropdown').click(function() {
+
+    $clickedDropdown = $(this).find('.dropdown-menu');
+
+    if ($clickedDropdown.hasClass('is-active')) { //base funz
+      $clickedDropdown.removeClass('is-active');
+    } else if ($('.dropdown-menu').hasClass('is-active')) {
+      $('.dropdown-menu').removeClass('is-active');
+      $clickedDropdown.addClass('is-active'); // funz anche con toggle
+    } else {
+      $clickedDropdown.addClass('is-active');
+    }
+    
+  });
+
+});
+
     // var clickedMenu = $(this).find('dropdown-menu');
     // console.log(clickedMenu);
     // clickedMenu.toggle('is-active');
@@ -26,20 +42,3 @@ $(document).ready(function () {
     // } else {
     //   $(this).find('.dropdown-menu').addClass('is-active'); //add
     // }
-    $clickedDropdown = $(this).find('.dropdown-menu');
-
-    if ($clickedDropdown.hasClass('is-active')) { //base funz
-      $clickedDropdown.removeClass('is-active');
-    } else if ($('.dropdown-menu').hasClass('is-active')) {
-      $('.dropdown-menu').removeClass('is-active');
-      $clickedDropdown.addClass('is-active'); // funz anche con toggle
-    } else {
-      $clickedDropdown.addClass('is-active');
-    }
-
-
-    // $(this).find('.dropdown-menu').toggleClass('is-active');
-    
-  });
-
-});
