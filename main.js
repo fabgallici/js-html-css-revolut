@@ -31,22 +31,22 @@ $(document).ready(function () {
   })
   
   //Hamburger Dropdown Menu Complete Vers
-  $hambDropClose = $('.hamburger-dropdown .dropdown-close');
-  $hambDropClose.click(function() {
-    console.log('click');
-    var $currentHambDrop = $(this).parents('.hamburger-dropdown');
-    var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function() {
+  //   console.log('click');
+  //   var $currentHambDrop = $(this).parents('.hamburger-dropdown');
+  //   var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
 
-    if ($currentHambDropMenu.hasClass('active')) {
-      $currentHambDropMenu.removeClass('active');
-    } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
-      $('.hamburger-dropdown-menu').removeClass('active');
-      $currentHambDropMenu.addClass('active'); //togliere per esclusione parziale
-    } else {
-      $currentHambDropMenu.addClass('active');
-    }
+  //   if ($currentHambDropMenu.hasClass('active')) {
+  //     $currentHambDropMenu.removeClass('active');
+  //   } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
+  //     $('.hamburger-dropdown-menu').removeClass('active');
+  //     $currentHambDropMenu.addClass('active'); //togliere per esclusione parziale
+  //   } else {
+  //     $currentHambDropMenu.addClass('active');
+  //   }
     
-  });
+  // });
 
   //Hamburger Dropdown Menu Base senza Autoesclusione
   // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
@@ -58,6 +58,7 @@ $(document).ready(function () {
   // });
 
   //Hamburger Dropdown Menu Base senza Autoesclusione Alt version meno specifica
+  //Non funziona più, funziona se dropdown-close viene assegnato a href 1 lvl sopra
   // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
   // $hambDropClose.click(function() {
   //   $(this).next().toggleClass('active');
