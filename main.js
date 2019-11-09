@@ -33,14 +33,15 @@ $(document).ready(function () {
   //Hamburger Dropdown Menu Complete Vers
   $hambDropClose = $('.hamburger-dropdown .dropdown-close');
   $hambDropClose.click(function() {
-    var $currentHambDrop = $(this).parent('.hamburger-dropdown');
+    console.log('click');
+    var $currentHambDrop = $(this).parents('.hamburger-dropdown');
     var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
 
     if ($currentHambDropMenu.hasClass('active')) {
       $currentHambDropMenu.removeClass('active');
     } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
       $('.hamburger-dropdown-menu').removeClass('active');
-      $currentHambDropMenu.addClass('active');
+      $currentHambDropMenu.addClass('active'); //togliere per esclusione parziale
     } else {
       $currentHambDropMenu.addClass('active');
     }
