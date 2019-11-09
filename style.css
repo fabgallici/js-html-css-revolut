@@ -4,12 +4,18 @@
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+/* ----- GENERAL RULES ----- */
 a {
   text-decoration: none;
 }
 li {
   list-style-type: none;
 }
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+/* ---- MAIN PAGE ----- */
 .page-wrapper {
   /* width: 80%; */
   max-width: 1300px;
@@ -45,6 +51,7 @@ header {
 }
 
 /*-------- HEADER RIGHT -----------*/
+.hamburger-menu a,
 .header-left .left-link a,
 .header-right a {
   color: rgb(139, 149, 158);
@@ -97,6 +104,17 @@ header {
     min-height: 100vh;
     background: #fff;
 }
+.hamburger-menu li {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+.hamburger-menu .business {
+  border-bottom: 1px solid #efefef;
+}
+
+
+/*--------- Media Query -----------*/
 @media screen and (max-width: 1080px) {
   .hamburger {
     display: block;

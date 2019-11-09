@@ -25,10 +25,11 @@ $(document).ready(function () {
   $('.hamburger').click(function() {
     $('.hamburger-menu').addClass('active');
   })
+  // Hamburger Menu Close
   $('.hamburger-menu .close').click(function () {
     $('.hamburger-menu').removeClass('active');
   })
-  // Hamburger Menu Close
+  
 
 });
 
