@@ -108,7 +108,7 @@ header {
     min-width: 100vw;
     min-height: 100vh;
     background: #fff;
-    /* overflow-x: auto; */
+    overflow-x: hidden;  /* debug scroll fantasma */
 }
 .hamburger-menu li {
   display: flex;

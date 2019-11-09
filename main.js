@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   $('.dropdown').click(function() {
 
-    $clickedDropdown = $(this).find('.dropdown-menu');
+    var $clickedDropdown = $(this).find('.dropdown-menu');
 
     if ($clickedDropdown.hasClass('is-active')) { //base funz
       $clickedDropdown.removeClass('is-active');
@@ -30,17 +30,37 @@ $(document).ready(function () {
     $('.hamburger-menu').removeClass('active');
   })
   
-  //Hamburger Dropdown Menu
-  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
-  // $hambDropClose.click(function() {
-  //   $currentHambDrop = $(this).parent('.hamburger-dropdown');
-  //   $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
-  // });
-  //Hamburger Dropdown Menu Alt version meno specifica
+  //Hamburger Dropdown Menu Complete Vers
   $hambDropClose = $('.hamburger-dropdown .dropdown-close');
   $hambDropClose.click(function() {
-    $(this).next().toggleClass('active');
-  })
+    var $currentHambDrop = $(this).parent('.hamburger-dropdown');
+    var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
+
+    if ($currentHambDropMenu.hasClass('active')) {
+      $currentHambDropMenu.removeClass('active');
+    } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
+      $('.hamburger-dropdown-menu').removeClass('active');
+      $currentHambDropMenu.addClass('active');
+    } else {
+      $currentHambDropMenu.addClass('active');
+    }
+    
+  });
+
+  //Hamburger Dropdown Menu Base senza Autoesclusione
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function () {
+
+  //   $currentHambDrop = $(this).parent('.hamburger-dropdown');
+  //   $currentHambDrop.find('.hamburger-dropdown-menu').toggleClass('active');
+
+  // });
+
+  //Hamburger Dropdown Menu Base senza Autoesclusione Alt version meno specifica
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function() {
+  //   $(this).next().toggleClass('active');
+  // })
 });
 
     // var clickedMenu = $(this).find('dropdown-menu');
