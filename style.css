@@ -18,6 +18,21 @@ li {
 .txt-right {
   text-align: right;
 }
+/* Buttons */
+.app-btn {
+  display: inline-block;
+  padding: 10px 20px; 
+  background-color: rgb(235, 0, 141);
+  border-radius: 999px;
+}
+.app-btn[href] {
+ color: #fff;
+ transition: all 0.2s ease;
+}
+.app-btn[href]:hover {
+  color: #fff;
+  background-color: #D2007E;
+}
 /* ---- MAIN PAGE ----- */
 .page-wrapper {
   /* width: 80%; */
@@ -40,10 +55,8 @@ header {
 /*-------- HEADER LEFT -----------*/
 .header-left ul,
 .header-right nav,
-.header-right nav ul {
+.header-right ul {
   display: flex;
-}
-.header-left ul {
   align-items: center;
 }
 .header-right li {
@@ -91,6 +104,10 @@ header {
 
 .is-active {
   display: block;
+}
+
+.header-right .app-btn {
+  margin-left: 15px;
 }
 /* ------ Hamburger Menu ----- */
 .hamburger,
