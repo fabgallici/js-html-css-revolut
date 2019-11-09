@@ -9,35 +9,36 @@ $(document).ready(function () {
   $('.dropdown').click(function() {
     // var clickedMenu = $(this).find('dropdown-menu');
     // console.log(clickedMenu);
-    // clickedMenu.toggle('menu-show');
-    // $('.dropdown').find('dropdown-menu').addClass('menu-show');
+    // clickedMenu.toggle('is-active');
+    // $('.dropdown').find('dropdown-menu').addClass('is-active');
 
     // $(".dropdown-menu").toggle();
-    // $('.dropdown .dropdown-menu').toggleClass('menu-show');
+    // $('.dropdown .dropdown-menu').toggleClass('is-active');
 
-    // $('.dropdown-menu').hasClass('menu-show').removeClass('menu-show');
+    // $('.dropdown-menu').hasClass('is-active').removeClass('is-active');
 
 
 
-    // if ($('.dropdown-menu').hasClass('menu-show')) {
+    // if ($('.dropdown-menu').hasClass('is-active')) {
     //   console.log('class removed');
-    //   $('.dropdown-menu').removeClass('menu-show');
-    //   $(this).find('.dropdown-menu').toggleClass('menu-show');
+    //   $('.dropdown-menu').removeClass('is-active');
+    //   $(this).find('.dropdown-menu').toggleClass('is-active');
     // } else {
-    //   $(this).find('.dropdown-menu').addClass('menu-show'); //add
+    //   $(this).find('.dropdown-menu').addClass('is-active'); //add
     // }
+    $clickedDropdown = $(this).find('.dropdown-menu');
 
-    if ($(this).find('.dropdown-menu').hasClass('menu-show')) { //base funz
-      $(this).find('.dropdown-menu').removeClass('menu-show');
-    } else if ($('.dropdown-menu').hasClass('menu-show')) {
-      $('.dropdown-menu').removeClass('menu-show');
-      $(this).find('.dropdown-menu').addClass('menu-show'); // funz anche con toggle
+    if ($clickedDropdown.hasClass('is-active')) { //base funz
+      $clickedDropdown.removeClass('is-active');
+    } else if ($('.dropdown-menu').hasClass('is-active')) {
+      $('.dropdown-menu').removeClass('is-active');
+      $clickedDropdown.addClass('is-active'); // funz anche con toggle
     } else {
-      $(this).find('.dropdown-menu').addClass('menu-show');
+      $clickedDropdown.addClass('is-active');
     }
 
 
-    // $(this).find('.dropdown-menu').toggleClass('menu-show');
+    // $(this).find('.dropdown-menu').toggleClass('is-active');
     
   });
 

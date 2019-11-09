@@ -32,7 +32,6 @@ header {
 .header-right nav,
 .header-right nav ul {
   display: flex;
-  align-items: center;
 }
 .header-right li {
   margin-left: 20px;
@@ -40,7 +39,13 @@ header {
 .header-left > ul li {
   margin-right: 20px;
 }
-
+.header-right a {
+  color: rgb(139, 149, 158);
+  transition: color 0.2s;
+}
+.header-right a:hover {
+  color: #191C1F;
+}
 .dropdown {
   position: relative;
 }
@@ -49,18 +54,23 @@ header {
   top: 30px;
   left: -10px;
   display: none;
-  /* translateX(50%); */
-  /* right: 0px; */
+  background-color: #fff;
   box-shadow: 0 0 10px grey;
 }
 .dropdown-menu ul {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 .dropdown-menu ul li {
-  margin-left: 0;
+  margin-left: 0;  /* reset prop */
   padding: 10px;
+  white-space: nowrap;
+  padding: 15px 20px;
+
 }
-.menu-show {
+
+.is-active {
   display: block;
 }
