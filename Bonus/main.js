@@ -16,15 +16,27 @@ $(document).ready(function () {
     }
   });
 
-  //Navbar dropdown menu Versione Semplificata con esclusione Funziona
+  //Navbar dropdown menu logica Semplificata con esclusione Funziona
   $('.dropdown').click(function () {
 
-    if ($('.dropdown').hasClass('is-active')) {
-      $('.dropdown').removeClass('is-active');
+    if ($('.dropdown').not(this).hasClass('is-active')) {
+      $('.dropdown').not(this).removeClass('is-active');
     } 
     $(this).toggleClass('is-active');
 
   });
+
+  //Navbar dropdown menu logica Semplificata Alternativa con esclusione Funziona
+  // $('.dropdown').click(function () {
+
+  //   if ($('.dropdown').hasClass('is-active')) {
+  //     $('.dropdown').removeClass('is-active');
+  //     $(this).toggleClass('is-active');
+  //   } else {
+  //     $(this).toggleClass('is-active');
+  //   }
+    
+  // });
 
 
   // Hamburger Menu Open
@@ -35,23 +47,51 @@ $(document).ready(function () {
   $('.hamburger-menu .close').click(function () {
     $('.hamburger-menu').removeClass('active');
   })
-  
-  //Hamburger Dropdown Menu Complete Vers
-  $hambDropClose = $('.hamburger-dropdown .dropdown-close');
-  $hambDropClose.click(function() {
-    var $currentHambDrop = $(this).parents('.hamburger-dropdown');
-    var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
 
-    if ($currentHambDropMenu.hasClass('active')) {
-      $currentHambDropMenu.removeClass('active');
-    } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
-      $('.hamburger-dropdown-menu').removeClass('active');
-      $currentHambDropMenu.addClass('active'); //togliere per esclusione parziale
-    } else {
-      $currentHambDropMenu.addClass('active');
+  //Hamburger Dropdown Menu Complete Vers logica semplificata 2.0
+  $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  $hambDropClose.click(function () {
+    var $currentHambDrop = $(this).parents('.hamburger-dropdown');
+
+    if ($('.hamburger-dropdown').not($currentHambDrop).hasClass('is-active')) {
+      $('.hamburger-dropdown').not($currentHambDrop).removeClass('is-active');
     }
-    
+
+    $currentHambDrop.toggleClass('is-active');
+
   });
+  
+  //Hamburger Dropdown Menu Complete Vers logica semplificata
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function () {
+  //   var $currentHambDrop = $(this).parents('.hamburger-dropdown');
+  //   var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
+
+  //   if ($('.hamburger-dropdown-menu').not($currentHambDropMenu).hasClass('active')) {
+  //     $('.hamburger-dropdown-menu').not($currentHambDropMenu).removeClass('active');
+  //   }
+
+  //   $currentHambDropMenu.toggleClass('active');
+
+  // });
+
+  //Hamburger Dropdown Menu Complete Vers
+  // $hambDropClose = $('.hamburger-dropdown .dropdown-close');
+  // $hambDropClose.click(function() {
+  //   var $currentHambDrop = $(this).parents('.hamburger-dropdown');
+  //   var $currentHambDropMenu = $currentHambDrop.find('.hamburger-dropdown-menu');
+
+  //   if ($currentHambDropMenu.hasClass('active')) {
+  //     $currentHambDropMenu.removeClass('active');
+  //   } else if ($('.hamburger-dropdown-menu').hasClass('active')) {
+  //     $('.hamburger-dropdown-menu').removeClass('active');
+  //     $currentHambDropMenu.addClass('active'); //togliere per esclusione parziale
+  //   } else {
+  //     $currentHambDropMenu.addClass('active');
+  //   }
+    
+  // });
+
 
     //Navbar dropdown menu
   // $('.dropdown').click(function () {
