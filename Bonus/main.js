@@ -25,6 +25,13 @@ $(document).ready(function () {
     $(this).toggleClass('is-active');
 
   });
+  //Navbar dropdown menu versione come dice Simone? però rimane aperto
+  // $('.dropdown').click(function () {
+ 
+  //   $('.dropdown').removeClass('is-active');
+   
+  //   $(this).addClass('is-active');
+  // });
 
   //Navbar dropdown menu logica Semplificata Alternativa con esclusione Funziona
   // $('.dropdown').click(function () {
@@ -37,7 +44,6 @@ $(document).ready(function () {
   //   }
     
   // });
-
 
   // Hamburger Menu Open
   $('.hamburger').click(function() {
