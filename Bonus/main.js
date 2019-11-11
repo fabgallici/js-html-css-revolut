@@ -16,20 +16,16 @@ $(document).ready(function () {
     }
   });
 
-
-  //Navbar dropdown menu
+  //Navbar dropdown menu Versione Semplificata con esclusione Funziona
   $('.dropdown').click(function () {
 
-    if ($(this).hasClass('is-active')) {
-      $(this).removeClass('is-active');
-    } else if ($('.dropdown').hasClass('is-active')) {
+    if ($('.dropdown').hasClass('is-active')) {
       $('.dropdown').removeClass('is-active');
-      $(this).addClass('is-active');
-    } else {
-      $(this).addClass('is-active');
-    }
+    } 
+    $(this).toggleClass('is-active');
 
   });
+
 
   // Hamburger Menu Open
   $('.hamburger').click(function() {
@@ -56,5 +52,30 @@ $(document).ready(function () {
     }
     
   });
+
+    //Navbar dropdown menu
+  // $('.dropdown').click(function () {
+
+  //   if ($(this).hasClass('is-active')) {
+  //     $(this).removeClass('is-active');
+  //   } else if ($('.dropdown').hasClass('is-active')) {
+  //     $('.dropdown').removeClass('is-active');
+  //     $(this).addClass('is-active');
+  //   } else {
+  //     $(this).addClass('is-active');
+  //   }
+
+  // });
+  //Navbar dropdown menu TEST
+  // $('.dropdown').click(function () {
+
+  //    if ($('.dropdown').hasClass('is-active')) {
+  //     $('.dropdown').removeClass('is-active');
+  //     $(this).toggleClass('is-active');
+  //   } else {
+  //     $(this).toggleClass('is-active');
+  //   }
+
+  // });
 
 });
