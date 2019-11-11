@@ -25,7 +25,7 @@ $(document).ready(function () {
     $(this).toggleClass('is-active');
 
   });
-  //Navbar dropdown menu versione come dice Simone? però rimane aperto
+  //Navbar dropdown menu versione semplificata non si richiude al click
   // $('.dropdown').click(function () {
  
   //   $('.dropdown').removeClass('is-active');
